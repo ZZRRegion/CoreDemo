@@ -1,0 +1,44 @@
+[
+  {
+    "outputFileName": "wwwroot/css/all.min.css",
+    "inputFiles": [
+      "node_modules/bootstrap/dist/css/bootstrap.css",
+      "wwwroot/css/site.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/bootstrap.css",
+    "inputFiles": [
+      "node_modules/bootstrap/dist/css/bootstrap.css"
+    ],
+    "minify": {
+      "enabled": false
+    }
+  },
+  //js
+  {
+    "outputFileName": "wwwroot/js/all.min.js",
+    "inputFiles": [
+      "node_modules/jquery-slim/dist/jquery.slim.js",
+      "node_modules/popper.js/dist/js/popper.js",
+      "node_modules/bootstrap/dist/js/bootstrap.js",
+      "wwwroot/js/site.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/js/vendor.js",
+    "inputFiles": [
+      "node_modules/jquery-slim/dist/jquery.slim.js",
+      "node_modules/popper.js/dist/js/popper.js",
+      "node_modules/bootstrap/dist/js/bootstrap.js"
+    ],
+    "minify": {
+      "enabled": false
+    }
+  }
+]

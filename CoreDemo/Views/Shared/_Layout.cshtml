@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"/>
+    <title>@ViewBag.Title</title>
+    <environment include="Development">
+        <link rel="stylesheet" asp-href-include="css/*" asp-href-exclude="css/all.min.css"/>
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" asp-href-include="css/all.min.css" />
+    </environment>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img asp-append-version="true" src="~/images/1timg.jpg" width="30" height="30" class="d-inline-block"/>
+            @this.ViewBag.Title
+        </a>
+    </nav>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

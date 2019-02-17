@@ -1,0 +1,27 @@
+﻿@using CoreDemo.Model
+@using Microsoft.Extensions.Options
+@using CoreDemo.Settings
+@model IEnumerable<Cinema> 
+
+@inject IOptions<ConnectionOptions> Options;
+<div class="container">
+    <div class="row">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">Capacity</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @this.Html.DisplayForModel()
+            </tbody>
+        </table>
+    </div>
+    <a asp-action="Add">添加</a>
+    @await this.Component.InvokeAsync("MovieCount", new { cinemaId = 1 })
+    <vc:movie-count cinema-id="1"></vc:movie-count>
+</div>
